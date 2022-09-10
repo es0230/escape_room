@@ -1,27 +1,18 @@
+import { ReactComponent as IconAllQuests } from '../../../../assets/img/icon-all-quests.svg';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-all-quests.svg... Remove this comment to see the full error message
-import { ReactComponent as IconAllQuests } from 'assets/img/icon-all-quests.svg';
+import { ReactComponent as IconAdventures } from '../../../../assets/img/icon-adventures.svg';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-adventures.svg... Remove this comment to see the full error message
-import { ReactComponent as IconAdventures } from 'assets/img/icon-adventures.svg';
+import { ReactComponent as IconHorrors } from '../../../../assets/img/icon-horrors.svg';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-horrors.svg' o... Remove this comment to see the full error message
-import { ReactComponent as IconHorrors } from 'assets/img/icon-horrors.svg';
+import { ReactComponent as IconMystic } from '../../../../assets/img/icon-mystic.svg';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-mystic.svg' or... Remove this comment to see the full error message
-import { ReactComponent as IconMystic } from 'assets/img/icon-mystic.svg';
+import { ReactComponent as IconDetective } from '../../../../assets/img/icon-detective.svg';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-detective.svg'... Remove this comment to see the full error message
-import { ReactComponent as IconDetective } from 'assets/img/icon-detective.svg';
+import { ReactComponent as IconScifi } from '../../../../assets/img/icon-scifi.svg';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-scifi.svg' or ... Remove this comment to see the full error message
-import { ReactComponent as IconScifi } from 'assets/img/icon-scifi.svg';
+import { ReactComponent as IconPerson } from '../../../../assets/img/icon-person.svg';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-person.svg' or... Remove this comment to see the full error message
-import { ReactComponent as IconPerson } from 'assets/img/icon-person.svg';
-
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-puzzle.svg' or... Remove this comment to see the full error message
-import { ReactComponent as IconPuzzle } from 'assets/img/icon-puzzle.svg';
+import { ReactComponent as IconPuzzle } from '../../../../assets/img/icon-puzzle.svg';
 import * as S from './quests-catalog.styled';
 
 const QuestsCatalog = () => (

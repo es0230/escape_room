@@ -1,5 +1,5 @@
 
-import { store } from 'store';
+import { store } from '../store/index';
 
 export type OrderPost = {
   name: string,

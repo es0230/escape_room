@@ -1,8 +1,7 @@
 
-import { MainLayout, PageTitle, PageSubtext } from 'components/common/common';
+import { MainLayout, PageTitle, PageSubtext } from '../common/common';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/contacts-map.jpg' o... Remove this comment to see the full error message
-import contactsMap from 'assets/img/contacts-map.jpg';
+import contactsMap from '../../assets/img/contacts-map.jpg';
 import * as S from './contacts.styled';
 
 const Contacts = () => (

@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 
-import { Quest } from 'types/state';
+import { Quest } from '../types/state';
 import { loadQuests } from './action';
 
 type InitialState = {

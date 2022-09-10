@@ -2,7 +2,7 @@
 // @ts-expect-error TS(7016): Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled, { css } from 'styled-components';
 
-import { Link } from 'components/common/common';
+import { Link } from '../../../../components/common/common';
 
 const Tabs = styled.ul`
   display: flex;

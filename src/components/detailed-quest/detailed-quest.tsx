@@ -1,15 +1,12 @@
 import { useState } from 'react';
 
-import { MainLayout } from 'components/common/common';
+import { MainLayout } from '../common/common';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-clock.svg' or ... Remove this comment to see the full error message
-import { ReactComponent as IconClock } from 'assets/img/icon-clock.svg';
+import { ReactComponent as IconClock } from '../../assets/img/icon-clock.svg';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-person.svg' or... Remove this comment to see the full error message
-import { ReactComponent as IconPerson } from 'assets/img/icon-person.svg';
+import { ReactComponent as IconPerson } from '../../assets/img/icon-person.svg';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-puzzle.svg' or... Remove this comment to see the full error message
-import { ReactComponent as IconPuzzle } from 'assets/img/icon-puzzle.svg';
+import { ReactComponent as IconPuzzle } from '../../assets/img/icon-puzzle.svg';
 import * as S from './detailed-quest.styled';
 import { BookingModal } from './components/components';
 

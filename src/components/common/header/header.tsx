@@ -1,6 +1,4 @@
-
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/logo.svg' or its co... Remove this comment to see the full error message
-import logo from 'assets/img/logo.svg';
+import logo from '../../../assets/img/logo.svg';
 import * as S from './header.styled';
 
 const Header = () => (

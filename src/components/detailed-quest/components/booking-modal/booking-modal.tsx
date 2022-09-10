@@ -1,7 +1,6 @@
 import * as S from './booking-modal.styled';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/icon-close.svg' or ... Remove this comment to see the full error message
-import { ReactComponent as IconClose } from 'assets/img/icon-close.svg';
+import { ReactComponent as IconClose } from '../../../../assets/img/icon-close.svg';
 
 const BookingModal = () => (
 

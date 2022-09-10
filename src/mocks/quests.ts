@@ -1,7 +1,7 @@
 
-import { Quest } from 'types/state';
+import { Quest } from '../types/state';
 
-const quests: Quest[] = [
+export const quests: Quest[] = [
   {
     id: 1,
     title: 'Маньяк',

@@ -2,10 +2,9 @@
 // @ts-expect-error TS(7016): Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 
-import { PageHeading as Heading } from 'components/common/common';
+import { PageHeading as Heading } from '../../components/common/common';
 
-// @ts-expect-error TS(2307): Cannot find module 'assets/img/contacts-bg.jpg' or... Remove this comment to see the full error message
-import contactsBg from 'assets/img/contacts-bg.jpg';
+import contactsBg from '../../assets/img/contacts-bg.jpg';
 
 const Main = styled.main`
   display: flex;

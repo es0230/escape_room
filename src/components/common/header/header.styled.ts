@@ -2,7 +2,7 @@
 // @ts-expect-error TS(7016): Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled, { css } from 'styled-components';
 
-import { Container, Link as RouterLink } from 'components/common/common';
+import { Container, Link as RouterLink } from '../common';
 
 const StyledHeader = styled.header`
   z-index: 5;
@@ -95,8 +95,8 @@ const Link = styled(RouterLink)`
   &:focus,
   &:hover {
     color: ${({
-  theme
-}: any) => theme.color.tangerine};
+      theme
+    }: any) => theme.color.tangerine};
   }
 `;
 

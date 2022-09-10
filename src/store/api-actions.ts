@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 
-import { APIRoute } from 'const';
+import { APIRoute } from '../const';
 
-import { AppDispatch, Quest, State } from 'types/state';
+import { AppDispatch, Quest, State } from '../types/state';
 import { loadQuests } from './action';
 
 export const fetchQuestsAction = createAsyncThunk<void, undefined, {
