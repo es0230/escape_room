@@ -1,6 +1,7 @@
+
 // @ts-expect-error TS(7016): Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
-// @ts-expect-error TS(2307): Cannot find module 'components/common/common' or i... Remove this comment to see the full error message
+
 import { Button } from 'components/common/common';
 
 const Main = styled.main`
