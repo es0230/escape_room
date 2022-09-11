@@ -1,30 +1,38 @@
 import * as S from './quests-catalog.styled';
 import { ReactComponent as IconPerson } from '../../../../assets/img/icon-person.svg';
 import { ReactComponent as IconPuzzle } from '../../../../assets/img/icon-puzzle.svg';
+import { Quest } from '../../../../types/state';
 
-function QuestItem(): JSX.Element {
+type QuestCardProps = {
+  questCard: Quest
+}
+
+const getPeopleCountString = (peopleCount: number[]): string => `${Math.min(...peopleCount)}-${Math.max(...peopleCount)}`;
+
+function QuestCard({ questCard }: QuestCardProps): JSX.Element {
+  const { id, title, previewImg, level, peopleCount } = questCard;
   return (
     <S.QuestItem>
-      <S.QuestItemLink to="/quest">
+      <S.QuestItemLink to={`/quest/${id}`}>
         <S.Quest>
           <S.QuestImage
-            src="img/preview-sklep.jpg"
+            src={previewImg}
             width="344"
             height="232"
-            alt="квест Склеп"
+            alt={`квест ${title}`}
           />
 
           <S.QuestContent>
-            <S.QuestTitle>Склеп</S.QuestTitle>
+            <S.QuestTitle>{title}</S.QuestTitle>
 
             <S.QuestFeatures>
               <S.QuestFeatureItem>
                 <IconPerson />
-                2–5 чел
+                {getPeopleCountString(peopleCount)}
               </S.QuestFeatureItem>
               <S.QuestFeatureItem>
                 <IconPuzzle />
-                сложный
+                {level}
               </S.QuestFeatureItem>
             </S.QuestFeatures>
           </S.QuestContent>
@@ -34,4 +42,4 @@ function QuestItem(): JSX.Element {
   );
 }
 
-export default QuestItem;
+export default QuestCard;

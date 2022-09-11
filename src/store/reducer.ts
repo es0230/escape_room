@@ -5,10 +5,12 @@ import { loadQuests } from './action';
 
 type InitialState = {
   quests: Quest[],
+  activeFilter: string,
 };
 
 const initialState: InitialState = {
   quests: [],
+  activeFilter: 'all',
 };
 
 const reducer = createReducer(initialState, (builder) => {
