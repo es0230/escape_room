@@ -1,5 +1,3 @@
-
-// @ts-expect-error TS(7016): Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -14,29 +12,21 @@ const Button = styled.button`
   padding-left: 48px;
 
   font-family: inherit;
-  font-size: ${({
-  theme
-}: any) => theme.font.upperbase};
+  font-size: ${({ theme }: any) => theme.font.upperbase};
   line-height: 20px;
   letter-spacing: 0.03em;
   font-weight: 800;
   text-transform: uppercase;
 
-  color: ${({
-  theme
-}: any) => theme.color.white};
-  background-color: ${({
-  theme
-}: any) => theme.color.tangerine};
+  color: ${({ theme }: any) => theme.color.white};
+  background-color: ${({ theme }: any) => theme.color.tangerine};
   border: none;
   border-radius: 65px;
   cursor: pointer;
 
   &:focus,
   &:hover {
-    background-color: ${({
-  theme
-}: any) => theme.color.carrotOrange};
+    background-color: ${({ theme }: any) => theme.color.carrotOrange};
   }
 
   &:active {

@@ -1,4 +1,3 @@
-
 import { Quest } from '../types/state';
 
 export const quests: Quest[] = [
@@ -68,4 +67,4 @@ export const quests: Quest[] = [
     peopleCount: [3, 4, 5],
     duration: 80,
   },
-]
+];

@@ -1,5 +1,3 @@
-
-// @ts-expect-error TS(7016): Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 
 import { Button } from '../common/common';
@@ -18,7 +16,6 @@ const PageImage = styled.img`
   left: 0;
   width: 100vw;
   height: 100vh;
-
   object-fit: cover;
 `;
 
@@ -36,16 +33,11 @@ const PageHeading = styled.div`
 const PageTitle = styled.h1`
   margin: 0;
   padding: 0;
-
-  font-size: ${({
-  theme
-}: any) => theme.font.large};
+  font-size: ${({ theme }: any) => theme.font.large};
   line-height: 95%;
   font-weight: 900;
   letter-spacing: -0.03em;
-  color: ${({
-  theme
-}: any) => theme.color.white};
+  color: ${({ theme }: any) => theme.color.white};
   text-transform: uppercase;
   overflow-wrap: anywhere;
 `;
@@ -55,14 +47,9 @@ const PageSubtitle = styled.p`
   margin-bottom: 10px;
   padding: 0;
   padding-left: 7px;
-
-  font-size: ${({
-  theme
-}: any) => theme.font.semibase};
+  font-size: ${({ theme }: any) => theme.font.semibase};
   line-height: 144%;
-  color: ${({
-  theme
-}: any) => theme.color.tangerine};
+  color: ${({ theme }: any) => theme.color.tangerine};
 `;
 
 const PageDescription = styled.div`
@@ -87,13 +74,11 @@ const FeaturesItem = styled.li`
   max-height: 65px;
   word-break: break-word;
   overflow: hidden;
-
   &:not(:last-of-type) {
     margin-right: 24px;
     padding-right: 24px;
     border-right: 1px solid rgba(255, 255, 255, 0.36);
   }
-
   svg {
     flex-shrink: 0;
   }
@@ -101,26 +86,18 @@ const FeaturesItem = styled.li`
 
 const FeatureTitle = styled.span`
   margin-left: 9px;
-
-  font-size: ${({
-  theme
-}: any) => theme.font.semibase};
+  font-size: ${({ theme }: any) => theme.font.semibase};
   line-height: 144%;
   font-weight: 400;
-  color: ${({
-  theme
-}: any) => theme.color.whisper2};
+  color: ${({ theme }: any) => theme.color.whisper2};
 `;
 
 const QuestDescription = styled.p`
   margin: 0;
   margin-bottom: 45px;
   padding: 0;
-
   line-height: 150%;
-  color: ${({
-  theme
-}: any) => theme.color.whisper2};
+  color: ${({ theme }: any) => theme.color.whisper2};
   letter-spacing: 0.013em;
 `;
 

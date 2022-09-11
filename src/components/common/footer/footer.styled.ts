@@ -1,5 +1,3 @@
-
-// @ts-expect-error TS(7016): Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled from 'styled-components';
 
 import { ReactComponent as InstagramIcon } from '../../../assets/img/icon-instagram-hover.svg';
@@ -57,9 +55,7 @@ const StyledVkIcon = styled(VkIcon)`
   }
 
   path {
-    fill: ${({
-  theme
-}: any) => theme.color.nero};
+    fill: ${({ theme }: any) => theme.color.nero};
   }
 
   &:focus circle,

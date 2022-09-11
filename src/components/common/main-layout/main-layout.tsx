@@ -1,15 +1,9 @@
-
 import { Header, Footer } from '../common';
 
-const MainLayout = ({
-  children
-}: any) => (
-
+const MainLayout = ({ children }: any): JSX.Element => (
   <>
-
     <Header />
     {children}
-
     <Footer />
   </>
 );

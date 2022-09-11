@@ -1,7 +1,4 @@
-
-// @ts-expect-error TS(7016): Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import styled, { css } from 'styled-components';
-
 import { Container, Link as RouterLink } from '../common';
 
 const StyledHeader = styled.header`
@@ -9,9 +6,7 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   left: 50%;
-
   width: 100vw;
-
   transform: translateX(-50%);
   background-color: rgba(26, 26, 26, 0.9);
 `;
@@ -36,7 +31,6 @@ const Logo = styled.a`
 
 const LogoLink = styled(RouterLink)`
   margin-right: 250px;
-
   @media (max-width: 1300px) {
     margin-right: auto;
   }
@@ -50,7 +44,6 @@ const Links = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-
   max-width: 600px;
   margin: 0;
   padding: 0;
@@ -67,59 +60,41 @@ const LinkItem = styled.li`
   }
 `;
 
+type LinkProps = {
+  isActiveLink?: boolean,
+}
+
 const Link = styled(RouterLink)`
   display: block;
   max-width: 100px;
-  font-size: ${({
-  theme
-}: any) => theme.font.semibase};
+  font-size: ${({ theme }: any) => theme.font.semibase};
   line-height: 16px;
   letter-spacing: 0.03em;
   font-weight: 600;
   text-transform: uppercase;
-
-  color: ${({
-  theme
-}: any) => theme.color.whiteSmoke};
-
-  ${({
-  $isActiveLink
-}: any) =>
-    $isActiveLink &&
-    css`
-      color: ${({
-      theme
-    }: any) => theme.color.tangerine};
+  color: ${({ theme }: any) => theme.color.whiteSmoke};
+  ${({ isActiveLink }: LinkProps) =>
+    isActiveLink && css`
+      color: ${({ theme }: any) => theme.color.tangerine};
     `}
-
   &:focus,
   &:hover {
-    color: ${({
-      theme
-    }: any) => theme.color.tangerine};
+    color: ${({ theme }: any) => theme.color.tangerine};
   }
 `;
 
 const Phone = styled.a`
   margin-top: 17px;
   margin-left: auto;
-  font-size: ${({
-  theme
-}: any) => theme.font.semibase};
+  font-size: ${({ theme }: any) => theme.font.semibase};
   line-height: 16px;
   letter-spacing: 0.03em;
   font-weight: 600;
-  color: ${({
-  theme
-}: any) => theme.color.whiteSmoke};
-
+  color: ${({ theme }: any) => theme.color.whiteSmoke};
   font-feature-settings: 'pnum' on, 'lnum' on;
-
   &:focus,
   &:hover {
-    color: ${({
-  theme
-}: any) => theme.color.tangerine};
+    color: ${({ theme }: any) => theme.color.tangerine};
   }
 `;
 

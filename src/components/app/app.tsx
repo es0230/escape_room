@@ -1,5 +1,3 @@
-
-// @ts-expect-error TS(7016): Could not find a declaration file for module 'styl... Remove this comment to see the full error message
 import { ThemeProvider } from 'styled-components';
 import {
   Switch,
@@ -15,7 +13,7 @@ import Home from '../../components/home/home';
 import { appTheme } from './common';
 import * as S from './app.styled';
 
-const App = () => (
+const App = (): JSX.Element => (
 
   <ThemeProvider theme={appTheme}>
 

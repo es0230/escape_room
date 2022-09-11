@@ -1,5 +1,3 @@
-
-// @ts-expect-error TS(7016): Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 export { Link, Switch, Route, BrowserRouter } from 'react-router-dom';
 
 export { default as Button } from './button/button';
