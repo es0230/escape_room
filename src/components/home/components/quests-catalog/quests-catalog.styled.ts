@@ -34,20 +34,21 @@ const TabItem = styled.li`
   }
 `;
 
-//type TabBtnProps = {
-//  isActive?: boolean,
-//};
+interface ITabBtn {
+  isActive?: boolean,
+  theme: Theme,
+}
 
-const TabBtn = styled.button.attrs({ type: 'button' })`
+const TabBtn = styled.button.attrs({ type: 'button' }) <ITabBtn>`
   display: flex;
   align-items: center;
   padding: 0;
   font-family: inherit;
-  font-size: ${({ theme }: Theme) => theme.font.semibase};
+  font-size: ${({ theme }) => theme.font.semibase};
   line-height: 140%;
   letter-spacing: -0.02em;
   font-weight: 700;
-  color: ${({ theme }: Theme) => theme.color.whisper2};
+  color: ${({ theme }) => theme.color.whisper2};
   background: transparent;
   border: none;
   cursor: pointer;
@@ -56,12 +57,11 @@ const TabBtn = styled.button.attrs({ type: 'button' })`
   }
   &:focus span,
   &:hover span {
-    border-bottom: 2px solid ${({ theme }: Theme) => theme.color.tangerine};
+    border-bottom: 2px solid ${({ theme }) => theme.color.tangerine};
   }
-  ${({ isActive }: any) =>
-    isActive && css`
+  ${({ isActive }) => isActive && css`
       span {
-        border-bottom: 2px solid ${({ theme }: Theme) => theme.color.tangerine};
+        border-bottom: 2px solid ${({ theme }) => theme.color.tangerine};
       }
     `}
 `;
@@ -182,18 +182,4 @@ const QuestFeatureItem = styled.li`
   }
 `;
 
-export {
-  Tabs,
-  TabItem,
-  TabBtn,
-  TabTitle,
-  QuestsList,
-  QuestItem,
-  QuestItemLink,
-  Quest,
-  QuestContent,
-  QuestTitle,
-  QuestImage,
-  QuestFeatures,
-  QuestFeatureItem,
-};
+export { Tabs, TabItem, TabBtn, TabTitle, QuestsList, QuestItem, QuestItemLink, Quest, QuestContent, QuestTitle, QuestImage, QuestFeatures, QuestFeatureItem, };

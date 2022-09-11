@@ -61,26 +61,27 @@ const LinkItem = styled.li`
   }
 `;
 
-//type LinkProps = {
-//  isActiveLink?: boolean,
-//}
+interface ILink {
+  isActiveLink?: boolean,
+  theme: Theme,
+}
 
-const Link = styled(RouterLink)`
+const Link = styled(RouterLink) <ILink>`
   display: block;
   max-width: 100px;
-  font-size: ${({ theme }: Theme) => theme.font.semibase};
+  font-size: ${({ theme }) => theme.font.semibase};
   line-height: 16px;
   letter-spacing: 0.03em;
   font-weight: 600;
   text-transform: uppercase;
-  color: ${({ theme }: Theme) => theme.color.whiteSmoke};
-  ${({ isActiveLink }: any) =>
+  color: ${({ theme }) => theme.color.whiteSmoke};
+  ${({ isActiveLink }) =>
     isActiveLink && css`
-      color: ${({ theme }: Theme) => theme.color.tangerine};
+      color: ${({ theme }) => theme.color.tangerine};
     `}
   &:focus,
   &:hover {
-    color: ${({ theme }: Theme) => theme.color.tangerine};
+    color: ${({ theme }) => theme.color.tangerine};
   }
 `;
 

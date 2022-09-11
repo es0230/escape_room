@@ -11,7 +11,7 @@ function QuestsFilter(): JSX.Element {
   return (
     <S.Tabs>
       <S.TabItem>
-        <S.TabBtn>
+        <S.TabBtn isActive>
           <IconAllQuests />
           <S.TabTitle>Все квесты</S.TabTitle>
         </S.TabBtn>

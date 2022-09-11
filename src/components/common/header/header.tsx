@@ -12,7 +12,7 @@ const Header = (): JSX.Element => (
       <S.Navigation>
         <S.Links>
           <S.LinkItem>
-            <S.Link to="/">
+            <S.Link isActiveLink to="/">
               Квесты
             </S.Link>
           </S.LinkItem>
