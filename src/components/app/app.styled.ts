@@ -6,6 +6,7 @@ import RalewaySemiBoldWoff2 from '../../assets/fonts/raleway-semibold.woff2';
 import RalewayBoldWoff2 from '../../assets/fonts/raleway-bold.woff2';
 import RalewayExtraBoldWoff2 from '../../assets/fonts/raleway-extrabold.woff2';
 import RalewayBlackWoff2 from '../../assets/fonts/raleway-black.woff2';
+import { Theme } from '../../types/theme';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -69,23 +70,20 @@ const GlobalStyle = createGlobalStyle`
   body {
     width: 100%;
     height: 100%;
-
     font-family: 'Raleway', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: ${({ theme }: any) => theme.font.base};
+    font-size: ${({ theme }: Theme) => theme.font.base};
     line-height: 22.5px;
-    color: ${({ theme }: any) => theme.color.whisper};
+    color: ${({ theme }: Theme) => theme.color.whisper};
     font-feature-settings: 'pnum' on, 'lnum' on;
-
-    background-color: ${({ theme }: any) => theme.color.nero};
-
+    background-color: ${({ theme }: Theme) => theme.color.nero};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   a {
-    color: ${({ theme }: any) => theme.color.whisper};
+    color: ${({ theme }: Theme) => theme.color.whisper};
     text-decoration: none;
   }
 
@@ -102,9 +100,8 @@ const GlobalStyle = createGlobalStyle`
 
   /* chrome autofill background removal */
   input:-webkit-autofill {
-    box-shadow: inset 0 0 0 1000px ${({ theme }: any) => theme.color.white};
-
-    -webkit-text-fill-color: ${({ theme }: any) => theme.color.black};
+    box-shadow: inset 0 0 0 1000px ${({ theme }: Theme) => theme.color.white};
+    -webkit-text-fill-color: ${({ theme }: Theme) => theme.color.black};
   }
 
   /* firefox placeholder \ invalid fix + ios bdrs */
@@ -148,7 +145,6 @@ const GlobalStyle = createGlobalStyle`
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     margin: 0;
-
     appearance: none;
   }
 
@@ -172,11 +168,9 @@ const GlobalStyle = createGlobalStyle`
 
   .visually-hidden {
     position: absolute;
-
     width: 1px;
     height: 1px;
     margin: -1px;
-
     clip: rect(0 0 0 0);
   }
 

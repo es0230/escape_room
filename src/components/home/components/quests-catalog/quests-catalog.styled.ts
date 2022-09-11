@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { Link } from '../../../../components/common/common';
+import { Theme } from '../../../../types/theme';
 
 const Tabs = styled.ul`
   display: flex;
@@ -23,7 +24,7 @@ const TabItem = styled.li`
   &:not(:last-of-type) {
     padding-right: 40px;
     margin-right: 39px;
-    border-right: 1px solid ${({ theme }: any) => theme.color.gray};
+    border-right: 1px solid ${({ theme }: Theme) => theme.color.gray};
   }
   @media (max-width: 1110px) {
     &:not(:last-of-type) {
@@ -42,11 +43,11 @@ const TabBtn = styled.button.attrs({ type: 'button' })`
   align-items: center;
   padding: 0;
   font-family: inherit;
-  font-size: ${({ theme }: any) => theme.font.semibase};
+  font-size: ${({ theme }: Theme) => theme.font.semibase};
   line-height: 140%;
   letter-spacing: -0.02em;
   font-weight: 700;
-  color: ${({ theme }: any) => theme.color.whisper2};
+  color: ${({ theme }: Theme) => theme.color.whisper2};
   background: transparent;
   border: none;
   cursor: pointer;
@@ -55,12 +56,12 @@ const TabBtn = styled.button.attrs({ type: 'button' })`
   }
   &:focus span,
   &:hover span {
-    border-bottom: 2px solid ${({ theme }: any) => theme.color.tangerine};
+    border-bottom: 2px solid ${({ theme }: Theme) => theme.color.tangerine};
   }
   ${({ isActive }: TabBtnProps) =>
     isActive && css`
       span {
-        border-bottom: 2px solid ${({ theme }: any) => theme.color.tangerine};
+        border-bottom: 2px solid ${({ theme }: Theme) => theme.color.tangerine};
       }
     `}
 `;
@@ -133,10 +134,10 @@ const QuestTitle = styled.h2`
   margin: 0;
   margin-bottom: 16px;
   padding: 0;
-  font-size: ${({ theme }: any) => theme.font.medium};
+  font-size: ${({ theme }: Theme) => theme.font.medium};
   line-height: 120%;
   font-weight: 700;
-  color: ${({ theme }: any) => theme.color.white};
+  color: ${({ theme }: Theme) => theme.color.white};
   word-break: break-word;
   overflow: hidden;
 `;
@@ -166,13 +167,13 @@ const QuestFeatureItem = styled.li`
   max-height: 50px;
   word-break: break-word;
   overflow: hidden;
-  font-size: ${({ theme }: any) => theme.font.small};
+  font-size: ${({ theme }: Theme) => theme.font.small};
   line-height: 144%;
-  color: ${({ theme }: any) => theme.color.whisper2};
+  color: ${({ theme }: Theme) => theme.color.whisper2};
   &:not(:last-of-type) {
     padding-right: 13px;
     margin-right: 12px;
-    border-right: 1px solid ${({ theme }: any) => theme.color.darkerGray};
+    border-right: 1px solid ${({ theme }: Theme) => theme.color.darkerGray};
   }
   svg {
     flex-shrink: 0;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Theme } from '../../../types/theme';
 
 const Button = styled.button`
   display: flex;
@@ -12,21 +13,21 @@ const Button = styled.button`
   padding-left: 48px;
 
   font-family: inherit;
-  font-size: ${({ theme }: any) => theme.font.upperbase};
+  font-size: ${({ theme }: Theme) => theme.font.upperbase};
   line-height: 20px;
   letter-spacing: 0.03em;
   font-weight: 800;
   text-transform: uppercase;
 
-  color: ${({ theme }: any) => theme.color.white};
-  background-color: ${({ theme }: any) => theme.color.tangerine};
+  color: ${({ theme }: Theme) => theme.color.white};
+  background-color: ${({ theme }: Theme) => theme.color.tangerine};
   border: none;
   border-radius: 65px;
   cursor: pointer;
 
   &:focus,
   &:hover {
-    background-color: ${({ theme }: any) => theme.color.carrotOrange};
+    background-color: ${({ theme }: Theme) => theme.color.carrotOrange};
   }
 
   &:active {

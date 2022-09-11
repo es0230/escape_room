@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Theme } from '../../../types/theme';
 import { Container, Link as RouterLink } from '../common';
 
 const StyledHeader = styled.header`
@@ -67,34 +68,34 @@ type LinkProps = {
 const Link = styled(RouterLink)`
   display: block;
   max-width: 100px;
-  font-size: ${({ theme }: any) => theme.font.semibase};
+  font-size: ${({ theme }: Theme) => theme.font.semibase};
   line-height: 16px;
   letter-spacing: 0.03em;
   font-weight: 600;
   text-transform: uppercase;
-  color: ${({ theme }: any) => theme.color.whiteSmoke};
+  color: ${({ theme }: Theme) => theme.color.whiteSmoke};
   ${({ isActiveLink }: LinkProps) =>
     isActiveLink && css`
-      color: ${({ theme }: any) => theme.color.tangerine};
+      color: ${({ theme }: Theme) => theme.color.tangerine};
     `}
   &:focus,
   &:hover {
-    color: ${({ theme }: any) => theme.color.tangerine};
+    color: ${({ theme }: Theme) => theme.color.tangerine};
   }
 `;
 
 const Phone = styled.a`
   margin-top: 17px;
   margin-left: auto;
-  font-size: ${({ theme }: any) => theme.font.semibase};
+  font-size: ${({ theme }: Theme) => theme.font.semibase};
   line-height: 16px;
   letter-spacing: 0.03em;
   font-weight: 600;
-  color: ${({ theme }: any) => theme.color.whiteSmoke};
+  color: ${({ theme }: Theme) => theme.color.whiteSmoke};
   font-feature-settings: 'pnum' on, 'lnum' on;
   &:focus,
   &:hover {
-    color: ${({ theme }: any) => theme.color.tangerine};
+    color: ${({ theme }: Theme) => theme.color.tangerine};
   }
 `;
 

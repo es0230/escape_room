@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { PageHeading as Heading } from '../../components/common/common';
 import contactsBg from '../../assets/img/contacts-bg.jpg';
+import { Theme } from '../../types/theme';
 
 const Main = styled.main`
   display: flex;
@@ -12,7 +13,7 @@ const Main = styled.main`
   background-image: url(${contactsBg});
   background-repeat: no-repeat;
   background-position: top left;
-  background-color: ${({ theme }: any) => theme.color.nero};
+  background-color: ${({ theme }: Theme) => theme.color.nero};
   background-size: cover;
 `;
 
@@ -48,19 +49,19 @@ const ContactsList = styled.dl`
 const ContactTitle = styled.dt`
   margin-bottom: 5px;
 
-  font-size: ${({ theme }: any) => theme.font.semibase};
+  font-size: ${({ theme }: Theme) => theme.font.semibase};
   line-height: 140%;
   font-weight: 700;
   letter-spacing: -0.02em;
 
-  color: ${({ theme }: any) => theme.color.whisper2};
+  color: ${({ theme }: Theme) => theme.color.whisper2};
 `;
 
 const ContactValue = styled.dd`
   margin: 0;
   padding: 0;
 
-  color: ${({ theme }: any) => theme.color.whisper2};
+  color: ${({ theme }: Theme) => theme.color.whisper2};
 
   &:not(:last-of-type) {
     margin-bottom: 30px;

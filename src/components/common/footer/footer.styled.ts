@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as InstagramIcon } from '../../../assets/img/icon-instagram-hover.svg';
 
 import { ReactComponent as VkIcon } from '../../../assets/img/icon-vk-hover.svg';
+import { Theme } from '../../../types/theme';
 
 const StyledFooter = styled.footer`
   z-index: 5;
@@ -36,11 +37,9 @@ const SocialLink = styled.a`
 
 const StyledInstagramIcon = styled(InstagramIcon)`
   display: flex;
-
   image {
     filter: grayscale(1);
   }
-
   &:focus image,
   &:hover image {
     filter: grayscale(0);
@@ -49,20 +48,16 @@ const StyledInstagramIcon = styled(InstagramIcon)`
 
 const StyledVkIcon = styled(VkIcon)`
   display: flex;
-
   circle {
     fill: #c6c4c2;
   }
-
   path {
-    fill: ${({ theme }: any) => theme.color.nero};
+    fill: ${({ theme }: Theme) => theme.color.nero};
   }
-
   &:focus circle,
   &:hover circle {
     fill: #4f779f;
   }
-
   &:focus path,
   &:hover path {
     fill: white;
