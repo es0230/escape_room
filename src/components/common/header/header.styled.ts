@@ -61,9 +61,9 @@ const LinkItem = styled.li`
   }
 `;
 
-type LinkProps = {
-  isActiveLink?: boolean,
-}
+//type LinkProps = {
+//  isActiveLink?: boolean,
+//}
 
 const Link = styled(RouterLink)`
   display: block;
@@ -74,7 +74,7 @@ const Link = styled(RouterLink)`
   font-weight: 600;
   text-transform: uppercase;
   color: ${({ theme }: Theme) => theme.color.whiteSmoke};
-  ${({ isActiveLink }: LinkProps) =>
+  ${({ isActiveLink }: any) =>
     isActiveLink && css`
       color: ${({ theme }: Theme) => theme.color.tangerine};
     `}

@@ -2,7 +2,7 @@ import logo from '../../../assets/img/logo.svg';
 import * as S from './header.styled';
 
 const Header = (): JSX.Element => (
-
+  // у первой S.Link было isActiveLink
   <S.StyledHeader>
     <S.HeaderWrapper>
       <S.Logo>
@@ -12,7 +12,7 @@ const Header = (): JSX.Element => (
       <S.Navigation>
         <S.Links>
           <S.LinkItem>
-            <S.Link isActiveLink to="/">
+            <S.Link to="/">
               Квесты
             </S.Link>
           </S.LinkItem>

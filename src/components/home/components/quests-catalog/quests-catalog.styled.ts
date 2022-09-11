@@ -34,9 +34,9 @@ const TabItem = styled.li`
   }
 `;
 
-type TabBtnProps = {
-  isActive?: boolean,
-};
+//type TabBtnProps = {
+//  isActive?: boolean,
+//};
 
 const TabBtn = styled.button.attrs({ type: 'button' })`
   display: flex;
@@ -58,7 +58,7 @@ const TabBtn = styled.button.attrs({ type: 'button' })`
   &:hover span {
     border-bottom: 2px solid ${({ theme }: Theme) => theme.color.tangerine};
   }
-  ${({ isActive }: TabBtnProps) =>
+  ${({ isActive }: any) =>
     isActive && css`
       span {
         border-bottom: 2px solid ${({ theme }: Theme) => theme.color.tangerine};
