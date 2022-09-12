@@ -4,9 +4,8 @@ import { AxiosInstance } from 'axios';
 import { APIRoute } from '../const';
 
 import { AppDispatch, Quest, State } from '../types/state';
-import { loadQuests } from './action';
 
-export const fetchQuestsAction = createAsyncThunk<void, undefined, {
+export const fetchQuestsAction = createAsyncThunk<Quest[], undefined, {
   dispatch: AppDispatch,
   state: State,
   extra: AxiosInstance
@@ -14,6 +13,6 @@ export const fetchQuestsAction = createAsyncThunk<void, undefined, {
   'fetchQuests',
   async (_arg, { dispatch, extra: api }) => {
     const { data } = await api.get<Quest[]>(APIRoute.Quests);
-    dispatch(loadQuests(data));
+    return data;
   },
 );

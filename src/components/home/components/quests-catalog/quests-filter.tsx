@@ -7,7 +7,6 @@ import { ReactComponent as IconDetective } from '../../../../assets/img/icon-det
 import { ReactComponent as IconScifi } from '../../../../assets/img/icon-scifi.svg';
 
 function QuestsFilter(): JSX.Element {
-  // у первой S.TabBtn был isActive
   return (
     <S.Tabs>
       <S.TabItem>

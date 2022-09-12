@@ -20,6 +20,12 @@ export type Quest = {
   duration: number
 };
 
+export type AppData = {
+  quests: Quest[],
+  activeFilter: string,
+  isDataLoaded: boolean,
+};
+
 export type AppDispatch = typeof store.dispatch;
 
 export type State = ReturnType<typeof store.getState>;

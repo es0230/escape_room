@@ -12,6 +12,7 @@ import Contacts from '../../components/contacts/contacts';
 import Home from '../../components/home/home';
 import { appTheme } from './common';
 import * as S from './app.styled';
+import NotFoundScreen from '../not-found-screen/not-found-screen';
 
 const App = (): JSX.Element => (
 
@@ -35,6 +36,11 @@ const App = (): JSX.Element => (
         <Route path="/">
 
           <Home />
+        </Route>
+
+        <Route path="*">
+
+          <NotFoundScreen />
         </Route>
       </Switch>
     </Router>

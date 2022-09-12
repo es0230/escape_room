@@ -20,10 +20,12 @@ const DetailedQuest = (): JSX.Element => {
   const [currentQuest, setCurrentQuest] = useState<Quest>();
 
   const { id } = useParams<{ id?: string | undefined }>();
+  //const navigate = useNavigate();
 
   useEffect(() => {
     api.get<Quest>(`${APIRoute.Quests}/${id}`)
       .then(({ data }) => setCurrentQuest(data));
+    //.catch(() => navigate('*'));
   }, [id]);
 
   if (currentQuest) {
@@ -33,7 +35,7 @@ const DetailedQuest = (): JSX.Element => {
       <MainLayout>
         <S.Main>
           <S.PageImage
-            src={coverImg}
+            src={`../../../public/${coverImg}`}
             alt={`квест ${title}`}
             width="1366"
             height="768"
