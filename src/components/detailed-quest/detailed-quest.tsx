@@ -5,7 +5,7 @@ import { ReactComponent as IconPerson } from '../../assets/img/icon-person.svg';
 import { ReactComponent as IconPuzzle } from '../../assets/img/icon-puzzle.svg';
 import * as S from './detailed-quest.styled';
 import { BookingModal } from './components/components';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Quest } from '../../types/state';
 import { api } from '../../store';
 import { APIRoute } from '../../const';
@@ -20,12 +20,12 @@ const DetailedQuest = (): JSX.Element => {
   const [currentQuest, setCurrentQuest] = useState<Quest>();
 
   const { id } = useParams<{ id?: string | undefined }>();
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     api.get<Quest>(`${APIRoute.Quests}/${id}`)
-      .then(({ data }) => setCurrentQuest(data));
-    //.catch(() => navigate('*'));
+      .then(({ data }) => setCurrentQuest(data))
+      .catch(() => navigate('*'));
   }, [id]);
 
   if (currentQuest) {
@@ -35,7 +35,7 @@ const DetailedQuest = (): JSX.Element => {
       <MainLayout>
         <S.Main>
           <S.PageImage
-            src={`../../../public/${coverImg}`}
+            src={coverImg}
             alt={`квест ${title}`}
             width="1366"
             height="768"

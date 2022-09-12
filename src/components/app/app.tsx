@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import {
-  Switch,
   Route,
+  Routes,
   BrowserRouter as Router,
 } from '../../components/common/common';
 
@@ -22,27 +22,17 @@ const App = (): JSX.Element => (
 
     <Router>
 
-      <Switch>
+      <Routes>
 
-        <Route exact path="/detailed-quest/:id">
-          <DetailedQuest />
-        </Route>
+        <Route path="/detailed-quest/:id" element={<DetailedQuest />} />
 
-        <Route exact path="/contacts">
+        <Route path="/contacts" element={<Contacts />} />
 
-          <Contacts />
-        </Route>
+        <Route path="/" element={<Home />} />
 
-        <Route path="/">
+        <Route path="*" element={<NotFoundScreen />} />
 
-          <Home />
-        </Route>
-
-        <Route path="*">
-
-          <NotFoundScreen />
-        </Route>
-      </Switch>
+      </Routes>
     </Router>
   </ThemeProvider>
 );

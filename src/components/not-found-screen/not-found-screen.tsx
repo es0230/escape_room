@@ -7,7 +7,7 @@ function NotFoundScreen(): JSX.Element {
       <S.Main>
         <S.PageContentWrapper>
           <S.PageHeading>
-            <S.PageTitle>Такого квеста нет :с</S.PageTitle>
+            <S.PageTitle>Такой страницы нет :С</S.PageTitle>
           </S.PageHeading>
         </S.PageContentWrapper>
       </S.Main>
