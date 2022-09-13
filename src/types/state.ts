@@ -22,8 +22,8 @@ export type Quest = {
 
 export type AppData = {
   quests: Quest[],
-  activeFilter: string,
   isDataLoaded: boolean,
+  currentFilter: string,
 };
 
 export type AppDispatch = typeof store.dispatch;

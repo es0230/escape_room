@@ -6,8 +6,8 @@ import { fetchQuestsAction } from '../api-actions';
 
 const initialState: AppData = {
   quests: [],
-  activeFilter: 'all',
   isDataLoaded: false,
+  currentFilter: 'all',
 };
 
 export const appData = createSlice({
@@ -16,6 +16,9 @@ export const appData = createSlice({
   reducers: {
     loadQuests: (state, action) => {
       state.quests = action.payload;
+    },
+    filterChange: (state, action) => {
+      state.currentFilter = action.payload;
     }
   },
   extraReducers(builder) {
@@ -32,3 +35,5 @@ export const appData = createSlice({
       });
   }
 });
+
+export const { filterChange } = appData.actions;
