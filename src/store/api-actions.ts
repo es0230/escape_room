@@ -16,3 +16,15 @@ export const fetchQuestsAction = createAsyncThunk<Quest[], undefined, {
     return data;
   },
 );
+
+//export const postOrderAction = createAsyncThunk<void, OrderPost, {
+//  dispatch: AppDispatch,
+//  state: State,
+//  extra: AxiosInstance
+//}>(
+//  'postOrder',
+//  async ({ name, peopleCount, phone, isLegal }, { dispatch, extra: api }) => {
+//    const { data } = await api.post(APIRoute.Orders, { name, peopleCount, phone, isLegal });
+
+//  },
+//);

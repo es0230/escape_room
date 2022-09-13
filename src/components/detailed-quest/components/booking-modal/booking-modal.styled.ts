@@ -29,7 +29,7 @@ const Modal = styled.section`
   border-radius: 3px;
 `;
 
-const ModalCloseBtn = styled.button`
+const ModalCloseBtn = styled.button.attrs({ type: 'button' })`
   position: absolute;
   top: 29px;
   right: 22px;

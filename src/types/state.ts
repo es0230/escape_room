@@ -3,7 +3,7 @@ import { store } from '../store/index';
 
 export type OrderPost = {
   name: string,
-  peopleCount: number,
+  peopleCount: number | string,
   phone: string,
   isLegal: boolean,
 }
