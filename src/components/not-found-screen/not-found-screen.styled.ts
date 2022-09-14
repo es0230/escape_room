@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Theme } from '../../types/theme';
+import { Button } from '../common/common';
 
 const Main = styled.main`
   max-width: 556px;
@@ -15,7 +16,7 @@ const PageContentWrapper = styled.div`
 
 const PageHeading = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   margin-bottom: 29px;
 `;
 
@@ -31,4 +32,11 @@ const PageTitle = styled.h1`
   overflow-wrap: anywhere;
 `;
 
-export { Main, PageContentWrapper, PageHeading, PageTitle };
+const BackToMainButton = styled(Button).attrs({ type: 'button' })`
+  border-radius: 0px;
+  margin-top: 10px;
+  width: 280px;
+  text-align: center;
+`;
+
+export { Main, PageContentWrapper, PageHeading, PageTitle, BackToMainButton };
