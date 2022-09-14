@@ -2,7 +2,9 @@ import * as S from './booking-modal.styled';
 
 import { ReactComponent as IconClose } from '../../../../assets/img/icon-close.svg';
 import { OrderPost } from '../../../../types/state';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { api } from '../../../../store';
+import { APIRoute } from '../../../../const';
 
 type BookingModalProps = {
   onCloseButtonClick: (arg0: boolean) => void,
@@ -23,7 +25,7 @@ enum InputTypeMap {
 
 const BookingModal = ({ onCloseButtonClick }: BookingModalProps): JSX.Element => {
   const [formData, setFormData] = useState(initialState);
-  //const [sendOrder, setSendReview] = useState(false);
+  const [sendOrder, setSendOrder] = useState(false);
 
   const inputWritingHandle = (evt: React.FormEvent<HTMLInputElement>, inputType: string) => {
     const { value } = evt.currentTarget;
@@ -33,6 +35,19 @@ const BookingModal = ({ onCloseButtonClick }: BookingModalProps): JSX.Element =>
   const inputCheckHandle = () => {
     setFormData({ ...formData, isLegal: !formData.isLegal });
   };
+
+  const onFormSubmit = (evt: React.FormEvent<HTMLButtonElement>) => {
+    evt.preventDefault();
+    setSendOrder(true);
+  };
+
+  useEffect(() => {
+    if (sendOrder) {
+      api.post<OrderPost>(APIRoute.Orders, formData);
+      setFormData(initialState);
+      setSendOrder(false);
+    }
+  }, [sendOrder]);
 
   return (
     <S.BlockLayer>
@@ -87,7 +102,7 @@ const BookingModal = ({ onCloseButtonClick }: BookingModalProps): JSX.Element =>
               value={formData.peopleCount}
             />
           </S.BookingField>
-          <S.BookingSubmit type="submit">Отправить заявку</S.BookingSubmit>
+          <S.BookingSubmit type="submit" onSubmit={onFormSubmit}>Отправить заявку</S.BookingSubmit>
           <S.BookingCheckboxWrapper>
             <S.BookingCheckboxInput
               type="checkbox"
