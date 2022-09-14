@@ -10,12 +10,23 @@ function QuestsCatalog(): JSX.Element {
   return (
     <>
       <QuestsFilter />
-
-      <S.QuestsList>
-        {activeQuests.map((quest) => (
-          <QuestCard questCard={quest} key={quest.id} />
-        ))}
-      </S.QuestsList>
+      {
+        activeQuests.length === 0 ?
+          <S.PageTitle>
+            Пока что квестов нет
+            <br />
+            <br />
+            (╯︵╰,)
+            <br />
+            <br />
+            Вернитесь позднее
+          </S.PageTitle> :
+          <S.QuestsList>
+            {activeQuests.map((quest) => (
+              <QuestCard questCard={quest} key={quest.id} />
+            ))}
+          </S.QuestsList>
+      }
     </>
   );
 }
