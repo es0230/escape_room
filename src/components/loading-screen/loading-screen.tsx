@@ -3,7 +3,7 @@ import * as S from './loading-screen.styled';
 function LoadingScreen(): JSX.Element {
   return (
     <S.PageTitle>
-      Загрузка
+      Загрузка...
     </S.PageTitle>
   );
 }

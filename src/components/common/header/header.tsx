@@ -3,11 +3,6 @@ import logo from '../../../assets/img/logo.svg';
 import { AppRoute } from '../../../const';
 import * as S from './header.styled';
 
-enum LocationMap {
-  Quests = '/',
-  Contacts = '/contacts'
-}
-
 const Header = (): JSX.Element => {
   const location = useLocation().pathname;
 
@@ -21,31 +16,31 @@ const Header = (): JSX.Element => {
         <S.Navigation>
           <S.Links>
             <S.LinkItem>
-              <S.Link isActiveLink={location === LocationMap.Quests} to={AppRoute.Home}>
+              <S.Link isActiveLink={location === AppRoute.Home} to={AppRoute.Home}>
                 Квесты
               </S.Link>
             </S.LinkItem>
 
             <S.LinkItem>
-              <S.Link to={AppRoute.FirstTime}>
+              <S.Link isActiveLink={location === AppRoute.FirstTime} to={AppRoute.FirstTime}>
                 Новичкам
               </S.Link>
             </S.LinkItem>
 
             <S.LinkItem>
-              <S.Link to={AppRoute.Reviews}>
+              <S.Link isActiveLink={location === AppRoute.Reviews} to={AppRoute.Reviews}>
                 Отзывы
               </S.Link>
             </S.LinkItem>
 
             <S.LinkItem>
-              <S.Link to={AppRoute.Promos}>
+              <S.Link isActiveLink={location === AppRoute.Promos} to={AppRoute.Promos}>
                 Акции
               </S.Link>
             </S.LinkItem>
 
             <S.LinkItem>
-              <S.Link isActiveLink={location === LocationMap.Contacts} to={AppRoute.Contacts}>
+              <S.Link isActiveLink={location === AppRoute.Contacts} to={AppRoute.Contacts}>
                 Контакты
               </S.Link>
             </S.LinkItem>

@@ -14,9 +14,6 @@ export const appData = createSlice({
   name: NameSpace.Data,
   initialState,
   reducers: {
-    loadQuests: (state, action) => {
-      state.quests = action.payload;
-    },
     filterChange: (state, action) => {
       state.currentFilter = action.payload;
     }

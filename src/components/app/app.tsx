@@ -26,7 +26,7 @@ const App = (): JSX.Element => (
 
       <Routes>
 
-        <Route path={`${AppRoute.DetailedQuest}/:id`} element={<DetailedQuest />} />
+        <Route path={AppRoute.DetailedQuest} element={<DetailedQuest />} />
 
         <Route path={AppRoute.Contacts} element={<Contacts />} />
 

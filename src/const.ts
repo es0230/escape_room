@@ -5,7 +5,7 @@ export enum APIRoute {
 
 export enum AppRoute {
   Home = '/',
-  DetailedQuest = '/detailed-quest',
+  DetailedQuest = '/detailed-quest/:id',
   Contacts = '/contacts',
   FirstTime = '/first-time',
   Reviews = '/reviews',
