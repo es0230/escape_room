@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import logo from '../../../assets/img/logo.svg';
+import { AppRoute } from '../../../const';
 import * as S from './header.styled';
 
 enum LocationMap {
@@ -20,25 +21,33 @@ const Header = (): JSX.Element => {
         <S.Navigation>
           <S.Links>
             <S.LinkItem>
-              <S.Link isActiveLink={location === LocationMap.Quests} to="/">
+              <S.Link isActiveLink={location === LocationMap.Quests} to={AppRoute.Home}>
                 Квесты
               </S.Link>
             </S.LinkItem>
 
             <S.LinkItem>
-              <S.Link to="#">Новичкам</S.Link>
+              <S.Link to={AppRoute.FirstTime}>
+                Новичкам
+              </S.Link>
             </S.LinkItem>
 
             <S.LinkItem>
-              <S.Link to="#">Отзывы</S.Link>
+              <S.Link to={AppRoute.Reviews}>
+                Отзывы
+              </S.Link>
             </S.LinkItem>
 
             <S.LinkItem>
-              <S.Link to="#">Акции</S.Link>
+              <S.Link to={AppRoute.Promos}>
+                Акции
+              </S.Link>
             </S.LinkItem>
 
             <S.LinkItem>
-              <S.Link isActiveLink={location === LocationMap.Contacts} to="/contacts">Контакты</S.Link>
+              <S.Link isActiveLink={location === LocationMap.Contacts} to={AppRoute.Contacts}>
+                Контакты
+              </S.Link>
             </S.LinkItem>
           </S.Links>
         </S.Navigation>

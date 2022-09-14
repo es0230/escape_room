@@ -5,8 +5,12 @@ export enum APIRoute {
 
 export enum AppRoute {
   Home = '/',
-  DetailedQuest = '/quest',
+  DetailedQuest = '/detailed-quest',
   Contacts = '/contacts',
+  FirstTime = '/first-time',
+  Reviews = '/reviews',
+  Promos = '/promos',
+  Unknown = '*',
 }
 
 export enum NameSpace {
