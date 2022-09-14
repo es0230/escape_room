@@ -34,12 +34,13 @@ const DetailedQuest = (): JSX.Element => {
   }
 
   const { title, description, coverImg, type, level, peopleCount, duration } = currentQuest;
-
+  // eslint-disable-next-line no-console
+  console.log(coverImg);
   return (
     <MainLayout>
       <S.Main>
         <S.PageImage
-          src={coverImg}
+          src={`../${coverImg}`}
           alt={`квест ${title}`}
           width="1366"
           height="768"
